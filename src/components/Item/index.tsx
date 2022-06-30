@@ -1,9 +1,11 @@
 import React from 'react';
 import { IItem } from "../../interfaces/IItem"
+import useDeletarItem from '../../state/hooks/useDeletarEvento';
 /* import styles from "./Item.module.scss";
  */
 export const Item: React.FC<{ item: IItem }> = ({ item })  => {
     
+    const excluirItem = useDeletarItem()
     
     return (
         <div>
@@ -13,6 +15,9 @@ export const Item: React.FC<{ item: IItem }> = ({ item })  => {
                 <h3>{item.nome}</h3>
                 <h3>{item.preco}</h3>
             </div>
+
+            <button  onClick={() => excluirItem(item)}>Excluir</button>
+
         </div>
     )
 }
