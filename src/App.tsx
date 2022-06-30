@@ -1,10 +1,16 @@
 import React from 'react';
-import Itens from './components/Itens';
+import { RecoilRoot } from 'recoil';
+import AdicionaItem from './components/AdicionaItem';
+import Itens from './components/ListaDeItens';
 
 function App() {
   return (
     <div className="App">
-      <Itens />
+      <RecoilRoot>
+        <Itens />
+        <AdicionaItem />
+
+      </RecoilRoot>  
     </div>
   );
 }
