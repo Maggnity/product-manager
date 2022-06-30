@@ -1,6 +1,6 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
-import AdicionaItem from './components/AdicionaItem';
+import AdicionaItem from './components/Formulario';
 import Itens from './components/ListaDeItens';
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
       <RecoilRoot>
         <Itens />
         <AdicionaItem />
-
       </RecoilRoot>  
     </div>
   );
