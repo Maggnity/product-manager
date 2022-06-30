@@ -1,0 +1,11 @@
+.lista {
+    justify-content: center;
+    background-color: rgb(220, 228, 225);
+    
+    &__item {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+}
