@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useAdicionarItem from "../../state/hooks/useAdicionarItem";
+import styles from './Formulario.module.scss'
 
 const Formulario: React.FC = () => {
     
@@ -32,39 +33,48 @@ const Formulario: React.FC = () => {
     
     return (
         <div>
-            <form onSubmit={newItem}>
-                <label htmlFor="id">Id</label>
-                    <input 
-                        title="id" 
-                        value={id}
-                        type="number" 
-                        onChange={(event) => {setId(event.target.value)}}
-                        required
-                    />
-                <label htmlFor="nome">Nome</label>
-                    <input 
-                        title="nome" 
-                        value={nome}
-                        type="text" 
-                        onChange={(event) => {setNome(event.target.value)}}
-                        required
-                    />
-                <label htmlFor="marca">Marca</label>
-                    <input 
-                        title="marca" 
-                        value={marca}
-                        type="text" 
-                        onChange={(event) => {setMarca(event.target.value)}}
-                        required
-                    />
-                <label htmlFor="preco">Valor</label>
-                    <input 
-                        title="preco" 
-                        value={preco}
-                        type="number" 
-                        onChange={(event) => {setPreco(event.target.value)}}
-                        required
-                    />
+            <h1 className={styles.form__title}>Adicionar Produto</h1>
+            <form className={styles.form} onSubmit={newItem}>
+                <span className={styles.input}>
+                    <label className={styles.input__label} htmlFor="id">Id</label>
+                        <input 
+                            title="id" 
+                            value={id}
+                            type="number" 
+                            onChange={(event) => {setId(event.target.value)}}
+                            required
+                        />
+                </span>
+                <span className={styles.input}>
+                    <label className={styles.input__label} htmlFor="nome">Nome</label>
+                        <input 
+                            title="nome" 
+                            value={nome}
+                            type="text" 
+                            onChange={(event) => {setNome(event.target.value)}}
+                            required
+                        />
+                    </span>
+                <span className={styles.input}>
+                    <label className={styles.input__label} htmlFor="marca">Marca</label>
+                        <input 
+                            title="marca" 
+                            value={marca}
+                            type="text" 
+                            onChange={(event) => {setMarca(event.target.value)}}
+                            required
+                        />
+                </span>
+                <span className={styles.input}>
+                    <label className={styles.input__label} htmlFor="preco">Valor</label>
+                        <input 
+                            title="preco" 
+                            value={preco}
+                            type="number" 
+                            onChange={(event) => {setPreco(event.target.value)}}
+                            required
+                        />
+                </span>
                 <button>
                     Adicionar Item
                 </button>
