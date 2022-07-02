@@ -1,8 +1,8 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
 import AdicionaItem from './components/Formulario';
-import Header from './components/Header';
-import Itens from './components/ListaDeItens';
+import Header from './components/Menu';
+import Itens from './pages/ListaDeItens';
 
 function App() {
   return (

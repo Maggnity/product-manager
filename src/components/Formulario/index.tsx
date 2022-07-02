@@ -75,7 +75,7 @@ const Formulario: React.FC = () => {
                             required
                         />
                 </span>
-                <button>
+                <button className={styles.send}>
                     Adicionar Item
                 </button>
             </form>

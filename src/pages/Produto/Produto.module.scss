@@ -1,0 +1,26 @@
+@import '../../Styles/colors';
+
+.page{
+    &__produto{
+
+    }
+    &__button {
+
+    }
+}
+
+.produto {
+    color: $cor-paleta-branco;
+    background-color: $cor-paleta-cinza-claro;
+    border-radius: 20px;
+    padding: 20px 20px;
+    margin: 20px 10px;
+    &__id{}
+    &__marca{}
+    &__nome{
+        font-size: 30px;
+    }
+    &__preco{
+        font-size: 30px;
+    }
+}

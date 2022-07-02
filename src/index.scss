@@ -1,7 +1,9 @@
+@import "./Styles/_colors.scss";
+
 html {
-  background: #4B69FD;
+  background: $cor-paleta-azul;
   border: 2px solid black;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Arvo' , serif;
 }
 
 #root {
