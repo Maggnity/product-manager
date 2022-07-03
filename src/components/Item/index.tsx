@@ -2,14 +2,39 @@ import React from 'react';
 import { IItem } from "../../interfaces/IItem"
 import styles from "./Item.module.scss";
 import { useNavigate } from 'react-router-dom';
+import Edit from "../../assets/img/edit.png"
+import Close from "../../assets/img/close.png"
+import useAtualizarItem from '../../state/hooks/useAtualizarItem';
+import useDeletarItem from '../../state/hooks/useDeletarItem';
 
 export const Item: React.FC<{ item: IItem }> = ({ item })  => {
     
     const navigate = useNavigate();
     const id = item.id
+
+    const atualizarItem = useAtualizarItem()
+    const excluirItem = useDeletarItem()
+
+    function DeletarItem(item: IItem){
+        excluirItem(item)
+    }
+    function AtualizarItem(item:IItem) {
+        
+        atualizarItem(item)
+    }
     
     return (
             <div className={styles.lista}>
+                <span className={styles.buttons}>
+                <button className={styles.button} onClick={() => DeletarItem(item)}>
+                    <img className={styles.button_img} src={Close} alt="Apagar" />
+                </button>
+                <button 
+                    className={styles.button} 
+                    onClick={() => AtualizarItem(item)}>
+                    <img className={styles.button__img} src={Edit} alt="Editar" />
+                </button>
+                </span>
                 <tr className={styles.lista__item} onClick={() => navigate(`/produto/${id}`)}>
                     <th className={styles.lista__id}>
                         {item.id}
@@ -23,12 +48,7 @@ export const Item: React.FC<{ item: IItem }> = ({ item })  => {
                     <th className={styles.lista__preco}>
                         $ {item.preco}
                     </th>
-                </tr>
-
-{/*                         <img src={Reload} className={styles.item__atualizar} alt="" onClick={() => atualizarItem(item)}/>
- */}                        
-{/*                         <img src={Remove} className={styles.item__excluir} onClick={() => excluirItem(item)}>Excluir</img>
- */}                        {/* <button className={styles.item__atualizar} onClick={() => atualizarItem(item)}>Atualizar</button> */}
+                </tr> 
             </div>
     )
 }

@@ -18,7 +18,7 @@ export default function AppRouter () {
                     <Menu />
                     <Routes >
                         <Route path='/' element={<Home />} />
-                            <Route path='formulario' element={<Formulario />} />
+                            <Route path='adicionar' element={<Formulario />} />
                             <Route path='lista-de-itens' element={<ListaDeItens />} /> 
                             <Route path='sobre' element={<Sobre />}> 
                         </Route>

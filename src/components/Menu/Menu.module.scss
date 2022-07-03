@@ -15,7 +15,13 @@
         margin: 10px 15px 0 15px;
     }
     
-    
+    &__logo {
+        width: 20%;
+        border-radius: 20px;
+        margin: 10px;
+        border: none;
+        background-color: $cor-paleta-1-500;
+    }
 
     &__link {
         list-style-type: none;

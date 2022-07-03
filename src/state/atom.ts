@@ -8,62 +8,62 @@ export const listaDeProdutosState = atom<IItem[]>(
         default: [
             {
                 "id": 1,
-                "nome": "teste_nome",
-                "marca": "teste_marca",
-                "preco": 25
+                "nome": "Casaco",
+                "marca": "Adidas",
+                "preco": 100
             },
             {
                 "id": 2,
-                "nome": "teste_nome2",
-                "marca": "teste_marca2",
+                "nome": "Tênis",
+                "marca": "Umbro",
                 "preco": 30
             },
             {
                 "id": 3,
-                "nome": "teste_nome",
-                "marca": "teste_marca",
+                "nome": "Calça",
+                "marca": "Lacoste",
                 "preco": 25
             },
             {
                 "id": 4,
-                "nome": "teste_nome2",
-                "marca": "teste_marca2",
+                "nome": "Touca",
+                "marca": "Umbro",
                 "preco": 30
             },
             {
                 "id": 5,
-                "nome": "teste_nome",
-                "marca": "teste_marca",
+                "nome": "Tênis",
+                "marca": "Umbro",
                 "preco": 25
             },
             {
                 "id": 6,
-                "nome": "teste_nome2",
-                "marca": "teste_marca2",
+                "nome": "Calça",
+                "marca": "Nike",
                 "preco": 30
             },
             {
                 "id": 7,
-                "nome": "teste_nome",
-                "marca": "teste_marca",
+                "nome": "Tênis",
+                "marca": "Lacoste",
                 "preco": 25
             },
             {
                 "id": 8,
-                "nome": "teste_nome2",
-                "marca": "teste_marca2",
-                "preco": 30
+                "nome": "Camiseta",
+                "marca": "Topper",
+                "preco": 100
             },
             {
                 "id": 9,
-                "nome": "teste_nome",
-                "marca": "teste_marca",
-                "preco": 25
+                "nome": "Jaqueta",
+                "marca": "Lacoste",
+                "preco": 250
             },
             {
                 "id": 10,
-                "nome": "teste_nome2",
-                "marca": "teste_marca2",
+                "nome": "Nike",
+                "marca": "Tênis",
                 "preco": 30
             },
         ]
@@ -73,6 +73,5 @@ export const listaDeProdutosState = atom<IItem[]>(
 export const buscaState = atom<IBusca>(
     {
         key: 'buscaState',
-        default: {}
     }
 )

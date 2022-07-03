@@ -10,19 +10,19 @@ export default function Menu() {
             to: "/"
         },
         {
+            label: 'Sobre',
+            to: "/sobre"
+        },
+        {
             label: 'Produtos',
             to: "/lista-de-itens"
         },
         {
-            label: 'Formulário',
-            to: "/formulario"
+            label: 'Adicionar',
+            to: "/adicionar"
         },
-        {
-            label: 'Sobre',
-            to: "/sobre"
-        },
+        
     ]
-    
     
     
 
