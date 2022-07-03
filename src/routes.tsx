@@ -7,6 +7,7 @@ import Home from './pages/Inicio';
 import Sobre from './pages/Sobre';
 import Produto from './pages/Produto';
 import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
 
 export default function AppRouter () {
@@ -25,6 +26,7 @@ export default function AppRouter () {
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </Router>
+                <Footer />
             </main>
         </RecoilRoot>
     )

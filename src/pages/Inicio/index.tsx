@@ -1,7 +1,8 @@
 export default function Home() {
     return (
-        <div>
+        <section>
             <h1>Gerenciador de Produtos</h1>
-        </div>
+            <img src="" alt="" />
+        </section>
     )
 }

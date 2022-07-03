@@ -24,19 +24,18 @@ export default function Menu() {
     ]
     
     
+    
+
     return (
-        <header className={styles.header}>
-            <nav>
-                <ul className={styles.menu}>
+            <nav className={styles.menu}>
+                <ul className={styles.menu__list}>
                     {rotas.map((rota, index) => (
                         <li key={index} className={styles.menu__link}>
                             <Link to={rota.to}>{rota.label}</Link>
                         </li>
                     ))}
                 </ul>
-                <img className={styles.header__img} src={Produtos} alt="" />
-                
+                <img className={styles.menu__img} src={Produtos} alt="" />
             </nav>
-        </header>
     )
 }

@@ -1,13 +1,23 @@
 @import "./Styles/_colors.scss";
 
 html {
-  background: $cor-paleta-azul;
-  border: 2px solid black;
+  background: $cor-paleta-background;
   font-family: 'Arvo' , serif;
 }
+body {
+  margin: 0px;
 
-#root {
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root > main.container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  & section {
+    flex-grow: 1;
+  }
 }

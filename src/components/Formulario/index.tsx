@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import useAdicionarItem from "../../state/hooks/useAdicionarItem";
 import styles from './Formulario.module.scss'
+import { Form } from "react-bootstrap";
+
 
 const Formulario: React.FC = () => {
     
@@ -32,54 +34,55 @@ const Formulario: React.FC = () => {
         
     
     return (
-        <div>
+        
+        <section>
             <h1 className={styles.form__title}>Adicionar Produto</h1>
             <form className={styles.form} onSubmit={newItem}>
-                <span className={styles.input}>
-                    <label className={styles.input__label} htmlFor="id">Id</label>
-                        <input 
-                            title="id" 
-                            value={id}
-                            type="number" 
-                            onChange={(event) => {setId(event.target.value)}}
-                            required
-                        />
-                </span>
-                <span className={styles.input}>
-                    <label className={styles.input__label} htmlFor="nome">Nome</label>
-                        <input 
-                            title="nome" 
-                            value={nome}
-                            type="text" 
-                            onChange={(event) => {setNome(event.target.value)}}
-                            required
-                        />
-                    </span>
-                <span className={styles.input}>
-                    <label className={styles.input__label} htmlFor="marca">Marca</label>
-                        <input 
-                            title="marca" 
-                            value={marca}
-                            type="text" 
-                            onChange={(event) => {setMarca(event.target.value)}}
-                            required
-                        />
-                </span>
-                <span className={styles.input}>
-                    <label className={styles.input__label} htmlFor="preco">Valor</label>
-                        <input 
-                            title="preco" 
-                            value={preco}
-                            type="number" 
-                            onChange={(event) => {setPreco(event.target.value)}}
-                            required
-                        />
-                </span>
+                
+                <Form.Label className={styles.form__label} htmlFor="id">Id</Form.Label>
+                <Form.Control
+                    className={styles.form__input}
+                    title="id"
+                    type="text"
+                    id="id"
+                    value={id}
+                    onChange={(event) => {setId(event.target.value)}}
+                />
+
+                <Form.Label className={styles.form__label} htmlFor="marca">Marca</Form.Label>
+                <Form.Control
+                    className={styles.form__input}
+                    title="marca"
+                    type="text"
+                    value={marca}
+                    onChange={(event) => {setMarca(event.target.value)}}
+                />
+
+                <Form.Label className={styles.form__label} htmlFor="nome">Nome</Form.Label>
+                <Form.Control
+                    className={styles.form__input}
+                    title="nome"
+                    type="text"
+                    value={nome}
+                    onChange={(event) => {setNome(event.target.value)}}
+                />
+
+                <Form.Label className={styles.form__label} htmlFor="preco">Preço</Form.Label>
+                <Form.Control
+                    className={styles.form__input}
+                    title="preco"
+                    type="text"
+                    id="id"
+                    value={preco}
+                    onChange={(event) => {setPreco(event.target.value)}}
+                />
+
                 <button className={styles.send}>
                     Adicionar Item
                 </button>
             </form>
-        </div>
+
+        </section>
     )
 }
 

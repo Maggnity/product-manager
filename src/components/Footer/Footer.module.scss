@@ -1,0 +1,19 @@
+@import '../../Styles/colors';
+@import '../../Styles/variables';
+@import '../../Styles/breakpoints';
+
+
+.footer {
+    background-color: $footer-background;
+    display: flex;
+    justify-content: center;
+    @media (max-width: $desktop_xsm) {
+    padding: px $padding-horizontal-mobile;
+    }
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 10px $padding-horizontal-sm;
+    }
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 10px $padding-horizontal-md;
+    }
+  }

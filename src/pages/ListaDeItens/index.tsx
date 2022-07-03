@@ -20,25 +20,22 @@ const ListaDeItens: React.FC = () => {
 
     return(
         <section>
-            <ul className={styles.head}>
-                <li className={styles.head__item}>
-                    <h1>Produtos</h1>
-                </li>
-                <li>
+            <h1>Produtos</h1>
             <Buscador />
-
-                </li>
-            </ul>
-            <ul className={styles.lista}>
+            <table className={styles.lista}>
+                    <tr className={styles.lista__head}>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                        <th>Preço</th>
+                    </tr>    
                 {itens.map((item, index) => (
-                    <li className={styles.lista__item}>
-                        <Item 
-                            item={item}
-                            key={item.id}
-                        />
-                    </li>
+                    <Item 
+                        item={item}
+                        key={item.id}
+                    />
                 ))}
-            </ul>
+            </table>
         </section>
     )
 }

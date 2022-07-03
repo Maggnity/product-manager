@@ -1,26 +1,65 @@
 @import '../../Styles/colors';
 
 .page{
-    &__produto{
-
-    }
     &__button {
+        width: 30%;
+        padding: 6px 12px;
+        justify-content: space-between;
+        align-items: center;
+        border-style: none;
 
+        &__left {
+            width: 10%;
+            border-style: none;
+
+
+            & img{
+                width: 25px;
+            }
+
+
+        }
+        &__rigth{
+            width: 10%;
+            border-style: none;
+            float: right;
+            background-color: $cor-paleta-branco;
+
+            & img{
+                width: 25px;
+            }
+
+        }
+        
     }
 }
 
 .produto {
-    color: $cor-paleta-branco;
-    background-color: $cor-paleta-cinza-claro;
+    background-color: $cor-paleta-branco;
     border-radius: 20px;
     padding: 20px 20px;
-    margin: 20px 10px;
-    &__id{}
-    &__marca{}
-    &__nome{
-        font-size: 30px;
+    margin: 20px 2px;
+    
+    &__img{
+        width: 50px;
+        justify-content: center;
+        align-items: center;
     }
-    &__preco{
-        font-size: 30px;
+    
+    &__id{
+        font-size: 16px;
+        background-color: $cor-paleta-verde;
+        width: 50px;
+        border-radius: 5px;
+        color: $cor-paleta-branco;
+        padding: 5px;
+        text-align: center;
+    }
+    &__marca{
+        font-size: 18px;
+    }
+    &__nome{
+        font-weight: bold;
+        font-size: 25px;
     }
 }
