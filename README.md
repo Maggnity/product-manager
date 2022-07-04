@@ -6,7 +6,7 @@
   <br>
 
 ### Veja o projeto em andamento:  
-[Controle de produtos](https://product-manager-rm2lgbv0n-maggnity.vercel.app/)
+[Controle de produtos](https://product-manager-six.vercel.app/)
 
   <br>
 
