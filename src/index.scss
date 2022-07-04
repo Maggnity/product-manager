@@ -1,7 +1,9 @@
 @import "./Styles/_colors.scss";
+@import "./Styles/_breakpoints.scss";
+
 
 html {
-  background: $cor-paleta-background;
+  background: $html-background;
   font-family: 'Arvo' , serif;
 }
 body {
@@ -19,5 +21,7 @@ body {
   min-height: 100vh;
   & section {
     flex-grow: 1;
+  }
+  @media (min-width: $desktop_md) {
   }
 }

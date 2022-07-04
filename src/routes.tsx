@@ -8,6 +8,7 @@ import Sobre from './pages/Sobre';
 import Produto from './pages/Produto';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
+import Editar from './components/Item/Editar';
 
 
 export default function AppRouter () {
@@ -23,6 +24,7 @@ export default function AppRouter () {
                             <Route path='sobre' element={<Sobre />}> 
                         </Route>
                         <Route path='produto/:id' element={<Produto /> } />
+                        <Route path='editar/:id' element={<Editar /> } />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </Router>

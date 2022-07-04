@@ -1,9 +1,6 @@
 @import '../../Styles/colors';
 @import '../../Styles/theme.scss';
 
-.container {
-}
-
 .form {
     display: flex;
     flex-direction: column;
@@ -18,12 +15,20 @@
     &__input {
         justify-content: center;
         background-color: $cor-paleta-1-100;
-        color: $cor-paleta-1-600;
+        color: $cor-paleta-1-850;
         font-weight: 700;
         width: 80%;
         margin-bottom: 20px;
-        padding: 10px 10px;
-        border-radius: 20px;
+        padding: 20px 10px;
+        border-radius: 10px;
+        transition: 0.3s;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+
+    }
+    &__input:hover {
+        background-color: $cor-paleta-1-250;
     }
 }
 
@@ -35,10 +40,15 @@
     font-size: 20px;
     margin-top: 20px;
     font-weight: 700;
-    color: $cor-paleta-1-100;
-    background-color: $cor-paleta-1-300;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send:hover {
+    background-color: $cor-paleta-1-850;
 }
 
 button {
-    width: 80%;
+    width: 70%;
 }

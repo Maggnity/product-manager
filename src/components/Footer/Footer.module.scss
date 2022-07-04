@@ -7,6 +7,20 @@
     background-color: $footer-background;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+    &__nome {
+      font-size: 20px
+    }
+    &__contato {
+      list-style: none;
+      line-height: 30px;
+      &__item {
+        list-style: none;
+      }
+    }
+    ;
+
     @media (max-width: $desktop_xsm) {
     padding: px $padding-horizontal-mobile;
     }

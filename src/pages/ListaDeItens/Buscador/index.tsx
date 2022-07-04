@@ -5,11 +5,13 @@ import styles from './Buscador.module.scss';
 
 export const Buscador: React.FC= () => {
     const setBusca = useSetRecoilState<IBusca>(buscaState)
-
     const filtro: IBusca = {} ;
-    
-    console.log(filtro.busca);
-    setBusca(filtro)
+
+
+    function Busca(busca: string){
+        setBusca(busca.target.value)
+        
+    }
 
     
     
@@ -21,6 +23,7 @@ export const Buscador: React.FC= () => {
                 title="search" 
                 type="text" 
                 placeholder="Buscar..."
+                onChange={(event) => {setBusca(event?.target.value)}}
             />
         </div>
     )

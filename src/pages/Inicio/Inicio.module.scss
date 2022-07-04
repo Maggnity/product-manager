@@ -1,1 +1,14 @@
 @import '../../Styles/theme.scss';
+@import '../../Styles=/breakpoints.scss';
+
+@media (min-width: $desktop_xsm) {
+
+}
+@media (min-width: $desktop_sm) {
+
+}
+@media (min-width: $desktop_md) {
+    .container {
+        width: 70%;
+    }
+}
